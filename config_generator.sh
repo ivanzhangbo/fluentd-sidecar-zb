@@ -26,11 +26,9 @@ do
 <source>
   type tail
   format none
-  time_key time
   path ${filepath}
   pos_file /etc/td-agent/fluentd-es${filename}.log.pos
   tag bone.$CUSTOMER
-  read_from_head true
 </source>
 EndOfMessage
 done
