@@ -25,13 +25,10 @@ do
   cat > "/etc/td-agent/files/${filename}" << EndOfMessage
 <source>
   type tail
-  format multiline
-  format_firstline /.*/
-  format1 /.*/
+  format none
   time_key time
   path ${filepath}
   pos_file /etc/td-agent/fluentd-es${filename}.log.pos
-  time_format %Y/%m/%d %H:%M:%S
   tag bone.$CUSTOMER
   read_from_head true
 </source>
