@@ -26,7 +26,7 @@ do
 <source>
   type tail
   format multiline
-  format_firstline /^(\d{4}\/\d{2}\/\d{2} \d{2}:\d{2}:\d{2} )([^ \-]*)[\-\ ]{2,3}(.*)$/
+  format_firstline .*
   format1 /^(?<time>\d{4}\/\d{2}\/\d{2} \d{2}:\d{2}:\d{2} )(?<severity>[^ \-]*)[\-\ ]{2,3}(?<message>[^\n]*)[\n]{0,1}(?<stacktrace>^.+Exception[^\n]+(\s+at .+)+)*(?<other>.*)/
   time_key time
   path ${filepath}
