@@ -30,5 +30,13 @@ do
   pos_file /etc/td-agent/fluentd-es${filename}.log.pos
   tag bone.foo
 </source>
+
+<filter bone.*>
+  @type record_transformer
+  <record>
+    logfile ${filepath}
+  </record>
+</filter>
+
 EndOfMessage
 done
