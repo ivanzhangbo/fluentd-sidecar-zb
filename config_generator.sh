@@ -28,7 +28,7 @@ do
   format none
   path ${filepath}
   pos_file /etc/td-agent/fluentd-es${filename}.log.pos
-  tag bone.$CUSTOMER
+  tag bone.foo
 </source>
 EndOfMessage
 done
