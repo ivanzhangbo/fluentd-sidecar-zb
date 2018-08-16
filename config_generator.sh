@@ -27,7 +27,7 @@ do
   type tail
   format multiline
   format_firstline /.*/
-  format1 /^(?<time>\d{4}\/\d{2}\/\d{2} \d{2}:\d{2}:\d{2} )(?<severity>[^ \-]*)[\-\ ]{2,3}(?<message>[^\n]*)[\n]{0,1}(?<stacktrace>^.+Exception[^\n]+(\s+at .+)+)*(?<other>.*)/
+  format1 /.*/
   time_key time
   path ${filepath}
   pos_file /etc/td-agent/fluentd-es${filename}.log.pos
