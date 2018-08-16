@@ -28,10 +28,10 @@ do
   format none
   path ${filepath}
   pos_file /etc/td-agent/fluentd-es${filename}.log.pos
-  tag bone.foo
+  tag bone.${filename}
 </source>
 
-<filter bone.*>
+<filter bone.**>
   @type record_transformer
   <record>
     logfile ${filepath}
