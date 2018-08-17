@@ -27,16 +27,9 @@ do
   type tail
   format none
   path ${filepath}
-  pos_file /etc/td-agent/fluentd-es${filename}.log.pos
-  tag bone.${filename}
+  pos_file /etc/td-agent/fluentd-es${filename}.pos
+  tag sidecar.${filename}
 </source>
-
-<filter bone.**>
-  @type record_transformer
-  <record>
-    logfile ${filepath}
-  </record>
-</filter>
 
 EndOfMessage
 done
